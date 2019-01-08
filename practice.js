@@ -138,7 +138,8 @@ user2.email = 'tyler.mcginnis@devmounta.in';
   Create an empty object called methodCollection.
 */
 
-//Code Here
+var methodCollection = {}
+
 
 
 
@@ -147,7 +148,9 @@ user2.email = 'tyler.mcginnis@devmounta.in';
   One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console. 
 */
 
-//Code Here
+methodCollection.alertHello = () => {alert("hello")};
+
+methodCollection.logHello = () => {console.log("hello")};
 
 
 
@@ -155,7 +158,9 @@ user2.email = 'tyler.mcginnis@devmounta.in';
   Now call your alertHello and logHello methods.
 */
 
-//Code Here
+//methodCollection.alertHello()
+
+//methodCollection.logHello()
 
 
 
@@ -166,7 +171,14 @@ user2.email = 'tyler.mcginnis@devmounta.in';
   Return a new object with all of the information that you passed in.
 */
 
-//Code Here
+function makePerson(name,bd,ssn,){
+  var me = {
+    name: name,
+    birthday: bd,
+    ssn: ssn
+  }
+  return me
+}
 
 
 
@@ -177,6 +189,11 @@ user2.email = 'tyler.mcginnis@devmounta.in';
   Return that object so that whenever you invoke makeCard, you get a brand new credit card.
 */
 
-//Code Here
-
-
+function makeCard(cn, ed, sc){
+  var newCard = {
+    cardNumber: cn,
+    expirationDate: ed,
+    securityCode: sc
+  }
+  return newCard;
+}
